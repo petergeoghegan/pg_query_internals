@@ -286,3 +286,66 @@ from
   join pg_class c on bc.relfilenode = c.relfilenode
 group by rollup(c.oid, c.relkind, relforknumber)
 order by pg_relation_size(c.oid) desc nulls last, c.oid, relforknumber;
+
+--
+-- Working with int4 indexes + bt_page_items() convenience functions.
+--
+-- Sources:
+--
+-- https://stackoverflow.com/questions/17208945/whats-the-easiest-way-to-represent-a-bytea-as-a-single-integer-in-postgresql
+-- https://stackoverflow.com/questions/11142235/convert-bigint-to-bytea-but-swap-the-byte-order
+--
+create or replace function reverse_bytes_iter(bytes bytea, length int, midpoint int, index int)
+returns bytea as
+$$
+  select case when index >= midpoint then bytes else
+    reverse_bytes_iter(
+      set_byte(
+        set_byte(bytes, index, get_byte(bytes, length-index)),
+        length-index, get_byte(bytes, index)
+      ),
+      length, midpoint, index + 1
+    )
+  end;
+$$ language sql immutable;
+
+create or replace function reverse_bytes(bytes bytea) returns bytea as
+$$
+select reverse_bytes_iter(bytes, octet_length(bytes)-1, octet_length(bytes)/2, 0)
+$$
+language sql immutable;
+
+create or replace function int4_from_bytea(bytea) returns int4
+as $$
+select ('x' || right($1::text, 6))::bit(24)::int;
+$$
+language sql immutable;
+
+create or replace function int4_from_page_data(text) returns int4
+as $$
+select int4_from_bytea(reverse_bytes(decode($1, 'hex')));
+$$
+language sql immutable;
+
+--
+-- Use:
+--
+--  postgres=# select *, int4_from_page_data(data) from bt_page_items('f', 1) limit 15;
+--   itemoffset │    ctid    │ itemlen │ nulls │ vars │          data           │ int4_from_page_data
+--  ────────────┼────────────┼─────────┼───────┼──────┼─────────────────────────┼─────────────────────
+--            1 │ (17698,69) │      16 │ f     │ f    │ 5c 00 00 00 00 00 00 00 │                  92
+--            2 │ (0,1)      │      16 │ f     │ f    │ 01 00 00 00 00 00 00 00 │                   1
+--            3 │ (8849,126) │      16 │ f     │ f    │ 01 00 00 00 00 00 00 00 │                   1
+--            4 │ (17699,25) │      16 │ f     │ f    │ 01 00 00 00 00 00 00 00 │                   1
+--            5 │ (17699,26) │      16 │ f     │ f    │ 01 00 00 00 00 00 00 00 │                   1
+--            6 │ (0,2)      │      16 │ f     │ f    │ 02 00 00 00 00 00 00 00 │                   2
+--            7 │ (8849,125) │      16 │ f     │ f    │ 02 00 00 00 00 00 00 00 │                   2
+--            8 │ (17699,23) │      16 │ f     │ f    │ 02 00 00 00 00 00 00 00 │                   2
+--            9 │ (17699,24) │      16 │ f     │ f    │ 02 00 00 00 00 00 00 00 │                   2
+--           10 │ (0,3)      │      16 │ f     │ f    │ 03 00 00 00 00 00 00 00 │                   3
+--           11 │ (8849,124) │      16 │ f     │ f    │ 03 00 00 00 00 00 00 00 │                   3
+--           12 │ (17699,21) │      16 │ f     │ f    │ 03 00 00 00 00 00 00 00 │                   3
+--           13 │ (17699,22) │      16 │ f     │ f    │ 03 00 00 00 00 00 00 00 │                   3
+--           14 │ (0,4)      │      16 │ f     │ f    │ 04 00 00 00 00 00 00 00 │                   4
+--           15 │ (8849,123) │      16 │ f     │ f    │ 04 00 00 00 00 00 00 00 │                   4
+--  (15 rows)

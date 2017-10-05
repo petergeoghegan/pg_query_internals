@@ -1,6 +1,6 @@
 # pg_query_internals: Query PostgreSQL internals using SQL
 
-Current version: 0.1
+Current version: 0.2
 
 Author: Peter Geoghegan [`<pg@bowt.ie>`](mailto:pg@bowt.ie)
 

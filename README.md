@@ -35,6 +35,14 @@ The SQL queries within `pg_query_internals.sql` are intended to be run on an
 ad-hoc basis.  The queries are deliberatly not packaged as functions within an
 extension.
 
+### Graphviz
+
+The SQL query within `graphviz-query.sql` can be used to generate a graph of a
+PostgreSQL B-Tree using graphviz.  The bash script `generate-btree-graph.sh`
+gives an example of how this can be coordinated and managed.
+
+This is based on a much earlier approach by Heikki Linnakangas.
+
 ### Other resources
 
 For those that wish to learn more about PostgreSQL B-Tree indexes, the

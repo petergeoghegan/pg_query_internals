@@ -1,0 +1,166 @@
+// Example B-Tree graph
+//
+// Breadth-first order
+//
+// Start from root, go left to right
+//
+// Workflow:
+//
+// $ dot -T svg btree.dot -o btree.svg;
+
+// #2ECC71 -- green
+// #F1C40F -- yellow
+// #E67E22 -- brown
+// #ECF0F1 -- gray
+
+digraph nbtree {
+graph [fontname = "monospace"];
+node [shape = none,height=.1,fontname = "monospace",fontsize=5];
+// Level 2 (Root internal level)
+node2_1[ label=<<table width="120">
+                    <tr>
+                        <td bgcolor='#F1C40F' width="20" port="f0">-&infin;</td>
+                        <td bgcolor='#F1C40F' width="20" port="f1">Papa</td>
+                        <td bgcolor='#E67E22' width="20">+&infin;</td>
+                        <td bgcolor='#ECF0F1' width="20">Level 2 page 1<br/>Block 1</td>
+                    </tr>
+                </table>
+               >
+        ];
+// Downlinks to children:
+"node2_1":f0 -> "node1_1":f0
+"node2_1":f1 -> "node1_2":f0
+// sibling pointer:
+// (None)
+
+
+// Level 1 (Internal level)
+// Downlinks + highkey:
+node1_1[ label=<<table width="120">
+                    <tr>
+                        <td bgcolor='#F1C40F' width="20" port="f0">-&infin;</td>
+                        <td bgcolor='#F1C40F' width="20" port="f1">Charlie</td>
+                        <td bgcolor='#F1C40F' width="20" port="f2">Golf</td>
+                        <td bgcolor='#F1C40F' width="20" port="f3">Mike</td>
+                        <td bgcolor='#E67E22' width="20">Papa</td>
+                        <td bgcolor='#ECF0F1' width="20">Level 1 page 1<br/>Block 3</td>
+                    </tr>
+                </table>
+               >
+        ];
+// Downlinks to children:
+"node1_1":f0 -> "node0_1":f0
+"node1_1":f1 -> "node0_2":f0
+"node1_1":f2 -> "node0_3":f0
+"node1_1":f3 -> "node0_4":f0
+// sibling pointer:
+"node1_1" -> "node1_2"[constraint=false,color=gray,style=dashed,arrowsize=0.5]
+// Downlinks + highkey:
+node1_2[ label=<<table width="120">
+                    <tr>
+                        <td bgcolor='#F1C40F' width="20" port="f0">-&infin;</td>
+                        <td bgcolor='#F1C40F' width="20" port="f1">Tango</td>
+                        <td bgcolor='#F1C40F' width="20" port="f2">X-Ray</td>
+                        <td bgcolor='#E67E22' width="20">+&infin;</td>
+                        <td bgcolor='#ECF0F1' width="20">Level 1 page 2<br/>Block 2</td>
+                    </tr>
+                </table>
+               >
+        ];
+// Downlinks to children:
+"node1_2":f0 -> "node0_5":f0
+"node1_2":f1 -> "node0_6":f0
+"node1_2":f2 -> "node0_7":f0
+// sibling pointer:
+// (None)
+
+
+// Level 0 (leaf level)
+node0_1[ label=<<table width="120">
+                    <tr>
+                        <td bgcolor='#2ECC71' width="20" port="f0">Alfa</td>
+                        <td bgcolor='#2ECC71' width="20" port="f1">Bravo</td>
+                        <td bgcolor='#E67E22' width="20">Charlie</td>
+                        <td bgcolor='#ECF0F1' width="20">Level 0 page 1<br/>Block 4</td>
+                    </tr>
+                </table>
+               >
+        ];
+// sibling pointer:
+"node0_1" -> "node0_2"[constraint=false,color=gray,style=dashed,arrowsize=0.5]
+node0_2[ label=<<table width="120">
+                    <tr>
+                        <td bgcolor='#2ECC71' width="20" port="f0">Delta</td>
+                        <td bgcolor='#2ECC71' width="20" port="f1">Echo</td>
+                        <td bgcolor='#2ECC71' width="20" port="f2">Foxtrot</td>
+                        <td bgcolor='#E67E22' width="20">Golf</td>
+                        <td bgcolor='#ECF0F1' width="20">Level 0 page 2<br/>Block 5</td>
+                    </tr>
+                </table>
+               >
+        ];
+// sibling pointer:
+"node0_2" -> "node0_3"[constraint=false,color=gray,style=dashed,arrowsize=0.5]
+node0_3[ label=<<table width="120">
+                    <tr>
+                        <td bgcolor='#2ECC71' width="20" port="f0">Juliet</td>
+                        <td bgcolor='#2ECC71' width="20" port="f1">Kilo</td>
+                        <td bgcolor='#2ECC71' width="20" port="f2">Lima</td>
+                        <td bgcolor='#E67E22' width="20">Mike</td>
+                        <td bgcolor='#ECF0F1' width="20">Level 0 page 3<br/>Block 6</td>
+                    </tr>
+                </table>
+               >
+        ];
+// sibling pointer:
+"node0_3" -> "node0_4"[constraint=false,color=gray,style=dashed,arrowsize=0.5]
+node0_4[ label=<<table width="120">
+                    <tr>
+                        <td bgcolor='#2ECC71' width="20" port="f0">November</td>
+                        <td bgcolor='#2ECC71' width="20" port="f1">Oscar</td>
+                        <td bgcolor='#E67E22' width="20">Papa</td>
+                        <td bgcolor='#ECF0F1' width="20">Level 0 page 4<br/>Block 7</td>
+                    </tr>
+                </table>
+               >
+        ];
+// sibling pointer:
+"node0_4" -> "node0_5"[constraint=false,color=gray,style=dashed,arrowsize=0.5]
+node0_5[ label=<<table width="120">
+                    <tr>
+                        <td bgcolor='#2ECC71' width="20" port="f0">Quebec</td>
+                        <td bgcolor='#2ECC71' width="20" port="f1">Romeo</td>
+                        <td bgcolor='#2ECC71' width="20" port="f2">Sierra</td>
+                        <td bgcolor='#E67E22' width="20">Tango</td>
+                        <td bgcolor='#ECF0F1' width="20">Level 0 page 5<br/>Block 8</td>
+                    </tr>
+                </table>
+               >
+        ];
+// sibling pointer:
+"node0_5" -> "node0_6"[constraint=false,color=gray,style=dashed,arrowsize=0.5]
+node0_6[ label=<<table width="120">
+                    <tr>
+                        <td bgcolor='#2ECC71' width="20" port="f0">Uniform</td>
+                        <td bgcolor='#2ECC71' width="20" port="f1">Victor</td>
+                        <td bgcolor='#E67E22' width="20">XRay</td>
+                        <td bgcolor='#ECF0F1' width="20">Level 0 page 6<br/>Block 9</td>
+                    </tr>
+                </table>
+               >
+        ];
+// sibling pointer:
+"node0_6" -> "node0_7"[constraint=false,color=gray,style=dashed,arrowsize=0.5]
+node0_7[ label=<<table width="120">
+                    <tr>
+                        <td bgcolor='#2ECC71' width="20" port="f0">Yankee</td>
+                        <td bgcolor='#2ECC71' width="20" port="f1">Zulu</td>
+                        <td bgcolor='#E67E22' width="20">+&infin;</td>
+                        <td bgcolor='#ECF0F1' width="20">Level 0 page 7<br/>Block 10</td>
+                    </tr>
+                </table>
+               >
+        ];
+// sibling pointer:
+// (None)
+}

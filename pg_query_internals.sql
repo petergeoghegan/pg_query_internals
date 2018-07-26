@@ -349,3 +349,25 @@ language sql immutable;
 --           14 │ (0,4)      │      16 │ f     │ f    │ 04 00 00 00 00 00 00 00 │                   4
 --           15 │ (8849,123) │      16 │ f     │ f    │ 04 00 00 00 00 00 00 00 │                   4
 --  (15 rows)
+
+-- Spurious unfrozen row catcher query.  From
+-- https://www.postgresql.org/message-id/20180319181723.ugaf7hfkluqyos5d@alap3.anarazel.de :
+create or replace function check_rel(rel regclass, out blockno int8, out lp int2, out xmin xid)
+returns setof record
+language sql
+as $$
+    select blockno, lp, t_xmin
+    from
+        generate_series(0, pg_relation_size($1::text) / 8192 - 1) blockno, -- every block in the relation
+        heap_page_items(get_raw_page($1::text, blockno::int4)) -- every item on the page
+    where
+        t_xmin is not null -- filter out empty items
+        and t_xmin != 1 -- filter out bootstrap
+        and t_xmin != 2 -- filter out frozen transaction id
+        and (t_infomask & ((x'0100' | x'0200')::int)) != ((x'0100' | x'0200')::int) -- filter out frozen rows with xid present
+        and age(t_xmin) > age((select relfrozenxid from pg_class where oid = $1)) -- xid cutoff filter
+$$;
+
+-- Usage:
+--
+-- select * from check_rel('pg_authid') limit 100;

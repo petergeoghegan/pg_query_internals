@@ -12,7 +12,7 @@ digraph nbtree {
 graph [fontname = "monospace"];
 node [shape = none,height=.1,fontname = "monospace",fontsize=5];
 // Level 2 (Root internal level)
-rootnode[ label=<<table width="70">
+rootnode[ label=<<table>
                     <tr>
                         <td bgcolor='burlywood' width="20" port="f0">-&infin;</td>
                         <td bgcolor='#FFFFFF' width="1" port="f1">&#8615;</td>
@@ -32,7 +32,7 @@ rootnode[ label=<<table width="70">
 
 // Level 1 (Internal level)
 // Downlinks + highkey:
-leftinternal[ label=<<table width="70">
+leftinternal[ label=<<table>
                     <tr>
                         <td bgcolor='burlywood' width="20" port="f0">-&infin;</td>
                         <td bgcolor='#FFFFFF' width="1" port="f1">&#8615;</td>
@@ -55,7 +55,7 @@ leftinternal[ label=<<table width="70">
 // sibling pointer:
 "leftinternal" -> "rightinternal"[constraint=false,color=burlywood,style=dashed,arrowsize=0.5]
 // Downlinks + highkey:
-rightinternal[ label=<<table width="70">
+rightinternal[ label=<<table>
                     <tr>
                         <td bgcolor='burlywood' width="20" port="f0">&quot;-&infin;&quot;</td>
                         <td bgcolor='#FFFFFF' width="1" port="f1">&#8615;</td>
@@ -135,7 +135,7 @@ leafnode_5[ label=<<table width="70">
         ];
 // sibling pointer:
 "leafnode_5" -> "leafnode_6"[constraint=false,color=burlywood,style=dashed,arrowsize=0.5]
-leafnode_6[ label=<<table width="70">
+leafnode_6[ label=<<table>
                     <tr>
                         <td bgcolor='forestgreen' width="20" port="f0">Uniform</td>
                         <td bgcolor='forestgreen' width="20" port="f1">Victor</td>

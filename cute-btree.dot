@@ -14,11 +14,11 @@ node [shape = none,height=.1,fontname = "monospace",fontsize=5];
 // Level 2 (Root internal level)
 rootnode[ label=<<table>
                     <tr>
-                        <td bgcolor='burlywood' width="20" port="f0">-&infin;</td>
-                        <td bgcolor='#FFFFFF' width="1" port="f1">&#8615;</td>
-                        <td bgcolor='burlywood' width="20" port="f2">Papa</td>
-                        <td bgcolor='#FFFFFF' width="1" port="f3">&#8615;</td>
-                        <td bgcolor='burlywood' width="20" port="hk">+&infin;</td>
+                        <td bgcolor='burlywood' port="f0">-&infin;</td>
+                        <td bgcolor='#FFFFFF' port="f1">&#8615;</td>
+                        <td bgcolor='burlywood' port="f2">Papa</td>
+                        <td bgcolor='#FFFFFF' port="f3">&#8615;</td>
+                        <td bgcolor='burlywood' port="hk">+&infin;</td>
                     </tr>
                 </table>
                >
@@ -34,15 +34,15 @@ rootnode[ label=<<table>
 // Downlinks + highkey:
 leftinternal[ label=<<table>
                     <tr>
-                        <td bgcolor='burlywood' width="20" port="f0">-&infin;</td>
-                        <td bgcolor='#FFFFFF' width="1" port="f1">&#8615;</td>
-                        <td bgcolor='burlywood' width="20" port="f2">Charlie</td>
-                        <td bgcolor='#FFFFFF' width="1" port="f3">&#8615;</td>
-                        <td bgcolor='burlywood' width="20" port="f4">Golf</td>
-                        <td bgcolor='#FFFFFF' width="1" port="f5">&#8615;</td>
-                        <td bgcolor='burlywood' width="20" port="f6">Mike</td>
-                        <td bgcolor='#FFFFFF' width="1" port="f7">&#8615;</td>
-                        <td bgcolor='burlywood' width="20" port="hk">Papa</td>
+                        <td bgcolor='burlywood' port="f0">-&infin;</td>
+                        <td bgcolor='#FFFFFF' port="f1">&#8615;</td>
+                        <td bgcolor='burlywood' port="f2">Charlie</td>
+                        <td bgcolor='#FFFFFF' port="f3">&#8615;</td>
+                        <td bgcolor='burlywood' port="f4">Golf</td>
+                        <td bgcolor='#FFFFFF' port="f5">&#8615;</td>
+                        <td bgcolor='burlywood' port="f6">Mike</td>
+                        <td bgcolor='#FFFFFF' port="f7">&#8615;</td>
+                        <td bgcolor='burlywood' port="hk">Papa</td>
                     </tr>
                 </table>
                >
@@ -57,13 +57,13 @@ leftinternal[ label=<<table>
 // Downlinks + highkey:
 rightinternal[ label=<<table>
                     <tr>
-                        <td bgcolor='burlywood' width="20" port="f0">&quot;-&infin;&quot;</td>
-                        <td bgcolor='#FFFFFF' width="1" port="f1">&#8615;</td>
-                        <td bgcolor='burlywood' width="20" port="f2">Tango</td>
-                        <td bgcolor='#FFFFFF' width="1" port="f3">&#8615;</td>
-                        <td bgcolor='burlywood' width="20" port="f4">X-Ray</td>
-                        <td bgcolor='#FFFFFF' width="1" port="f5">&#8615;</td>
-                        <td bgcolor='burlywood' width="20" port="hk">+&infin;</td>
+                        <td bgcolor='burlywood' port="f0">&quot;-&infin;&quot;</td>
+                        <td bgcolor='#FFFFFF' port="f1">&#8615;</td>
+                        <td bgcolor='burlywood' port="f2">Tango</td>
+                        <td bgcolor='#FFFFFF' port="f3">&#8615;</td>
+                        <td bgcolor='burlywood' port="f4">X-Ray</td>
+                        <td bgcolor='#FFFFFF' port="f5">&#8615;</td>
+                        <td bgcolor='burlywood' port="hk">+&infin;</td>
                     </tr>
                 </table>
                >
@@ -79,9 +79,9 @@ rightinternal[ label=<<table>
 // Level 0 (leaf level)
 leafnode_1[ label=<<table>
                     <tr>
-                        <td bgcolor='forestgreen' width="20" port="f0">Alfa</td>
-                        <td bgcolor='forestgreen' width="20" port="f1">Bravo</td>
-                        <td bgcolor='burlywood' width="20" port="hk">Charlie</td>
+                        <td bgcolor='forestgreen' port="f0">Alfa</td>
+                        <td bgcolor='forestgreen' port="f1">Bravo</td>
+                        <td bgcolor='burlywood' port="hk">Charlie</td>
                     </tr>
                 </table>
                >
@@ -90,10 +90,10 @@ leafnode_1[ label=<<table>
 "leafnode_1" -> "leafnode_2"[constraint=false,color=burlywood,style=dashed,arrowsize=0.5]
 leafnode_2[ label=<<table>
                     <tr>
-                        <td bgcolor='forestgreen' width="20" port="f0">Delta</td>
-                        <td bgcolor='forestgreen' width="20" port="f1">Echo</td>
-                        <td bgcolor='forestgreen' width="20" port="f2">Foxtrot</td>
-                        <td bgcolor='burlywood' width="20" port="hk">Golf</td>
+                        <td bgcolor='forestgreen' port="f0">Delta</td>
+                        <td bgcolor='forestgreen' port="f1">Echo</td>
+                        <td bgcolor='forestgreen' port="f2">Foxtrot</td>
+                        <td bgcolor='burlywood' port="hk">Golf</td>
                     </tr>
                 </table>
                >
@@ -102,10 +102,10 @@ leafnode_2[ label=<<table>
 "leafnode_2" -> "leafnode_3"[constraint=false,color=burlywood,style=dashed,arrowsize=0.5]
 leafnode_3[ label=<<table>
                     <tr>
-                        <td bgcolor='forestgreen' width="20" port="f0">Juliet</td>
-                        <td bgcolor='forestgreen' width="20" port="f1">Kilo</td>
-                        <td bgcolor='forestgreen' width="20" port="f2">Lima</td>
-                        <td bgcolor='burlywood' width="20" port="hk">Mike</td>
+                        <td bgcolor='forestgreen' port="f0">Juliet</td>
+                        <td bgcolor='forestgreen' port="f1">Kilo</td>
+                        <td bgcolor='forestgreen' port="f2">Lima</td>
+                        <td bgcolor='burlywood' port="hk">Mike</td>
                     </tr>
                 </table>
                >
@@ -114,9 +114,9 @@ leafnode_3[ label=<<table>
 "leafnode_3" -> "leafnode_4"[constraint=false,color=burlywood,style=dashed,arrowsize=0.5]
 leafnode_4[ label=<<table>
                     <tr>
-                        <td bgcolor='forestgreen' width="20" port="f0">November</td>
-                        <td bgcolor='forestgreen' width="20" port="f1">Oscar</td>
-                        <td bgcolor='burlywood' width="20" port="hk">Papa</td>
+                        <td bgcolor='forestgreen' port="f0">November</td>
+                        <td bgcolor='forestgreen' port="f1">Oscar</td>
+                        <td bgcolor='burlywood' port="hk">Papa</td>
                     </tr>
                 </table>
                >
@@ -125,10 +125,10 @@ leafnode_4[ label=<<table>
 "leafnode_4" -> "leafnode_5"[constraint=false,color=burlywood,style=dashed,arrowsize=0.5]
 leafnode_5[ label=<<table>
                     <tr>
-                        <td bgcolor='forestgreen' width="20" port="f0">Quebec</td>
-                        <td bgcolor='forestgreen' width="20" port="f1">Romeo</td>
-                        <td bgcolor='forestgreen' width="20" port="f2">Sierra</td>
-                        <td bgcolor='burlywood' width="20" port="hk">Tango</td>
+                        <td bgcolor='forestgreen' port="f0">Quebec</td>
+                        <td bgcolor='forestgreen' port="f1">Romeo</td>
+                        <td bgcolor='forestgreen' port="f2">Sierra</td>
+                        <td bgcolor='burlywood' port="hk">Tango</td>
                     </tr>
                 </table>
                >
@@ -137,9 +137,9 @@ leafnode_5[ label=<<table>
 "leafnode_5" -> "leafnode_6"[constraint=false,color=burlywood,style=dashed,arrowsize=0.5]
 leafnode_6[ label=<<table>
                     <tr>
-                        <td bgcolor='forestgreen' width="20" port="f0">Uniform</td>
-                        <td bgcolor='forestgreen' width="20" port="f1">Victor</td>
-                        <td bgcolor='burlywood' width="20" port="hk">XRay</td>
+                        <td bgcolor='forestgreen' port="f0">Uniform</td>
+                        <td bgcolor='forestgreen' port="f1">Victor</td>
+                        <td bgcolor='burlywood' port="hk">XRay</td>
                     </tr>
                 </table>
                >
@@ -148,9 +148,9 @@ leafnode_6[ label=<<table>
 "leafnode_6" -> "leafnode_7"[constraint=false,color=burlywood,style=dashed,arrowsize=0.5]
 leafnode_7[ label=<<table>
                     <tr>
-                        <td bgcolor='forestgreen' width="20" port="f0">Yankee</td>
-                        <td bgcolor='forestgreen' width="20" port="f1">Zulu</td>
-                        <td bgcolor='burlywood' width="20" port="hk">+&infin;</td>
+                        <td bgcolor='forestgreen' port="f0">Yankee</td>
+                        <td bgcolor='forestgreen' port="f1">Zulu</td>
+                        <td bgcolor='burlywood' port="hk">+&infin;</td>
                     </tr>
                 </table>
                >

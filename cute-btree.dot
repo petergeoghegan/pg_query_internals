@@ -58,20 +58,20 @@ leftinternal[ label=<<table>
 rightinternal[ label=<<table>
                     <tr>
                         <td bgcolor='burlywood' port="s0">&quot;-&infin;&quot;</td>
-                        <td bgcolor='#FFFFFF' port="f1">&#8615;</td>
-                        <td bgcolor='burlywood' port="s2">Tango</td>
-                        <td bgcolor='#FFFFFF' port="f3">&#8615;</td>
-                        <td bgcolor='burlywood' port="s4">X-Ray</td>
-                        <td bgcolor='#FFFFFF' port="f5">&#8615;</td>
+                        <td bgcolor='#FFFFFF' port="d0">&#8615;</td>
+                        <td bgcolor='burlywood' port="s1">Tango</td>
+                        <td bgcolor='#FFFFFF' port="d1">&#8615;</td>
+                        <td bgcolor='burlywood' port="s2">X-Ray</td>
+                        <td bgcolor='#FFFFFF' port="d2">&#8615;</td>
                         <td bgcolor='burlywood' port="hk">+&infin;</td>
                     </tr>
                 </table>
                >
         ];
 // Downlink arrows to children:
-"rightinternal":f1 -> "leafnode_5":t0
-"rightinternal":f3 -> "leafnode_6":t0
-"rightinternal":f5 -> "leafnode_7":t0
+"rightinternal":d0 -> "leafnode_5":t0
+"rightinternal":d1 -> "leafnode_6":t0
+"rightinternal":d2 -> "leafnode_7":t0
 // sibling pointer:
 // (None)
 

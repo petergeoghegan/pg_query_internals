@@ -35,23 +35,23 @@ rootnode[ label=<<table>
 leftinternal[ label=<<table>
                     <tr>
                         <td bgcolor='burlywood' port="s0">-&infin;</td>
-                        <td bgcolor='#FFFFFF' port="f1">&#8615;</td>
-                        <td bgcolor='burlywood' port="s2">Charlie</td>
-                        <td bgcolor='#FFFFFF' port="f3">&#8615;</td>
-                        <td bgcolor='burlywood' port="s4">Golf</td>
-                        <td bgcolor='#FFFFFF' port="f5">&#8615;</td>
-                        <td bgcolor='burlywood' port="s6">Mike</td>
-                        <td bgcolor='#FFFFFF' port="f7">&#8615;</td>
+                        <td bgcolor='#FFFFFF' port="d0">&#8615;</td>
+                        <td bgcolor='burlywood' port="s1">Charlie</td>
+                        <td bgcolor='#FFFFFF' port="d1">&#8615;</td>
+                        <td bgcolor='burlywood' port="s2">Golf</td>
+                        <td bgcolor='#FFFFFF' port="d2">&#8615;</td>
+                        <td bgcolor='burlywood' port="s3">Mike</td>
+                        <td bgcolor='#FFFFFF' port="d3">&#8615;</td>
                         <td bgcolor='burlywood' port="hk">Papa</td>
                     </tr>
                 </table>
                >
         ];
 // Downlink arrows to children:
-"leftinternal":f1 -> "leafnode_1":t0
-"leftinternal":f3 -> "leafnode_2":t0
-"leftinternal":f5 -> "leafnode_3":t0
-"leftinternal":f7 -> "leafnode_4":t0
+"leftinternal":d0 -> "leafnode_1":t0
+"leftinternal":d1 -> "leafnode_2":t0
+"leftinternal":d2 -> "leafnode_3":t0
+"leftinternal":d3 -> "leafnode_4":t0
 // sibling pointer:
 "leftinternal" -> "rightinternal"[constraint=false,color=burlywood,style=dashed,arrowsize=0.5]
 // Downlinks + highkey:
@@ -160,6 +160,6 @@ leafnode_7[ label=<<table>
 
 // Force alignment from root to internal to leaf levels:
 edge[style=invis];
-"rootnode":s2 -> "leafnode_4":hk
+"rootnode":s1 -> "leafnode_4":hk
 "leftinternal":hk -> "leafnode_4":hk
 }

@@ -15,17 +15,17 @@ node [shape = none,height=.1,fontname = "monospace",fontsize=5];
 rootnode[ label=<<table>
                     <tr>
                         <td bgcolor='burlywood' port="s0">-&infin;</td>
-                        <td bgcolor='#FFFFFF' port="f1">&#8615;</td>
-                        <td bgcolor='burlywood' port="s2">Papa</td>
-                        <td bgcolor='#FFFFFF' port="f3">&#8615;</td>
+                        <td bgcolor='#FFFFFF' port="d0">&#8615;</td>
+                        <td bgcolor='burlywood' port="s1">Papa</td>
+                        <td bgcolor='#FFFFFF' port="d1">&#8615;</td>
                         <td bgcolor='burlywood' port="hk">+&infin;</td>
                     </tr>
                 </table>
                >
         ];
 // Downlink arrows to children:
-"rootnode":f1 -> "leftinternal":s0
-"rootnode":f3 -> "rightinternal":s0
+"rootnode":d0 -> "leftinternal":s0
+"rootnode":d1 -> "rightinternal":s0
 // sibling pointer:
 // (None)
 

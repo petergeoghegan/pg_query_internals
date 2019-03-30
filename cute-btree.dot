@@ -57,7 +57,7 @@ leftinternal[ label=<<table width="70">
 // Downlinks + highkey:
 rightinternal[ label=<<table width="70">
                     <tr>
-                        <td bgcolor='burlywood' width="20" port="f0">&quote;-&infin;</td>
+                        <td bgcolor='burlywood' width="20" port="f0">&quot;-&infin;&quot;</td>
                         <td bgcolor='#FFFFFF' width="1" port="f1">&#8615;</td>
                         <td bgcolor='burlywood' width="20" port="f2">Tango</td>
                         <td bgcolor='#FFFFFF' width="1" port="f3">&#8615;</td>

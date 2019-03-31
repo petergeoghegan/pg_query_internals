@@ -76,7 +76,7 @@ leafnode_3[ label=<<table>
                         <td bgcolor='burlywood' port="hk">+&infin;</td>
                     </tr>
                     <tr>
-                        <td colspan="4" border="0" bgcolor='white'>2 or more non-pivot items, no high key</td>
+                        <td colspan="5" border="0" bgcolor='white'>2+ non-pivot items, implicit +&infin; high key</td>
                     </tr>
                 </table>
                >

@@ -10,7 +10,7 @@
 
 digraph nbtree {
 graph [fontname = "monospace"];
-node [shape = none,height=.1,fontname = "monospace",fontsize=5];
+node [shape = none,height=.1,fontname = "monospace",fontsize=8];
 // Level 2 (Root internal level)
 rootnode[ label=<<table>
                     <tr>

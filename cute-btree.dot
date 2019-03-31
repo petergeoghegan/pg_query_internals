@@ -139,6 +139,7 @@ leafnode_6[ label=<<table>
                     <tr>
                         <td bgcolor='darkseagreen1' port="t0">Uniform</td>
                         <td bgcolor='darkseagreen1' port="t1">Victor</td>
+                        <td bgcolor='darkseagreen1' port="t2">XRay</td>
                         <td bgcolor='burlywood' port="hk">XRay</td>
                     </tr>
                 </table>

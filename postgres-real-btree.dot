@@ -42,7 +42,7 @@ leafnode_1[ label=<<table>
                         <td bgcolor='darkseagreen1' port="t1">2,'(0,2)'</td>
                         <td border="0" bgcolor='white' port="t2">...</td>
                         <td bgcolor='darkseagreen1' port="t1">366,'(5,61)'</td>
-                        <td bgcolor='burlywood' port="hk">367,-&infin;</td>
+                        <td bgcolor='burlywood' port="hk">367,'-&infin;'</td>
                     </tr>
                 </table>
                >
@@ -55,7 +55,7 @@ leafnode_2[ label=<<table>
                         <td bgcolor='darkseagreen1' port="t1">368,'(6,2')</td>
                         <td border="0" bgcolor='white' port="t2">...</td>
                         <td bgcolor='darkseagreen1' port="t1">732,'(11,61)'</td>
-                        <td bgcolor='burlywood' port="hk">733,-&infin;</td>
+                        <td bgcolor='burlywood' port="hk">733,'-&infin;'</td>
                     </tr>
                 </table>
                >

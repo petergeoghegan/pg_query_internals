@@ -57,7 +57,7 @@ leafnode_2[ label=<<table>
                         <td bgcolor='darkseagreen1' port="t0">367,'(6,1')</td>
                         <td bgcolor='darkseagreen1' port="t1">368,'(6,2')</td>
                         <td border="0" bgcolor='white' port="t2">...</td>
-                        <td bgcolor='darkseagreen1' port="t1">732,'(11,61)'</td>
+                        <td bgcolor='darkseagreen1' port="t3">732,'(11,61)'</td>
                         <td bgcolor='burlywood' port="hk">733,'-&infin;'</td>
                     </tr>
                     <tr>
@@ -76,7 +76,7 @@ leafnode_3[ label=<<table>
                         <td bgcolor='burlywood' port="hk">+&infin;</td>
                     </tr>
                     <tr>
-                        <td colspan="5" border="0" bgcolor='white'>2+ non-pivot items, implicit +&infin; high key</td>
+                        <td colspan="4" border="0" bgcolor='white'>2+ non-pivot items, implicit +&infin; high key</td>
                     </tr>
                 </table>
                >

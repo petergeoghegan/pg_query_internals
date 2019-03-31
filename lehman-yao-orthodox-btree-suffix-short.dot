@@ -23,12 +23,12 @@ rootnode[ label=<<table>
                         <td bgcolor='white' port="d2">&#8615;</td>
                         <td bgcolor='burlywood' port="s3">M</td>
                         <td bgcolor='white' port="d3">&#8615;</td>
-                        <td bgcolor='burlywood' port="s0">&quot;-&infin;&quot;</td>
-                        <td bgcolor='white' port="d0">&#8615;</td>
-                        <td bgcolor='burlywood' port="s1">T</td>
-                        <td bgcolor='white' port="d1">&#8615;</td>
-                        <td bgcolor='burlywood' port="s2">X</td>
-                        <td bgcolor='white' port="d2">&#8615;</td>
+                        <td bgcolor='burlywood' port="s4">P</td>
+                        <td bgcolor='white' port="d4">&#8615;</td>
+                        <td bgcolor='burlywood' port="s5">T</td>
+                        <td bgcolor='white' port="d5">&#8615;</td>
+                        <td bgcolor='burlywood' port="s6">X</td>
+                        <td bgcolor='white' port="d6">&#8615;</td>
                         <td bgcolor='burlywood' port="hk">+&infin;</td>
                     </tr>
                 </table>
@@ -39,9 +39,10 @@ rootnode[ label=<<table>
 "rootnode":d1 -> "leftleafnode_2"
 "rootnode":d2 -> "leftleafnode_3"
 "rootnode":d3 -> "leftleafnode_4"
-"rootnode":d0 -> "rightleafnode_1":t0
-"rootnode":d1 -> "rightleafnode_2":t0
-"rootnode":d2 -> "rightleafnode_3":t0
+// Still need this, to make arrows not overlap too much:
+"rootnode":d4 -> "leftleafnode_5":t0
+"rootnode":d5 -> "leftleafnode_6":t0
+"rootnode":d6 -> "leftleafnode_7":t0
 
 // sibling pointer:
 // (None)
@@ -93,8 +94,8 @@ leftleafnode_4[ label=<<table>
                >
         ];
 // sibling pointer (not a cousin anymore):
-"leftleafnode_4" -> "rightleafnode_1"[constraint=false,color=black,style=dashed,arrowsize=0.5]
-rightleafnode_1[ label=<<table>
+"leftleafnode_4" -> "leftleafnode_5"[constraint=false,color=black,style=dashed,arrowsize=0.5]
+leftleafnode_5[ label=<<table>
                     <tr>
                         <td bgcolor='darkseagreen1' port="t0">Quebec</td>
                         <td bgcolor='darkseagreen1' port="t1">Romeo</td>
@@ -105,8 +106,8 @@ rightleafnode_1[ label=<<table>
                >
         ];
 // sibling pointer:
-"rightleafnode_1" -> "rightleafnode_2"[constraint=false,color=black,style=dashed,arrowsize=0.5]
-rightleafnode_2[ label=<<table>
+"leftleafnode_5" -> "leftleafnode_6"[constraint=false,color=black,style=dashed,arrowsize=0.5]
+leftleafnode_6[ label=<<table>
                     <tr>
                         <td bgcolor='darkseagreen1' port="t0">Uniform</td>
                         <td bgcolor='darkseagreen1' port="t1">Victor</td>
@@ -117,8 +118,8 @@ rightleafnode_2[ label=<<table>
                >
         ];
 // sibling pointer:
-"rightleafnode_2" -> "rightleafnode_3"[constraint=false,color=black,style=dashed,arrowsize=0.5]
-rightleafnode_3[ label=<<table>
+"leftleafnode_6" -> "leftleafnode_7"[constraint=false,color=black,style=dashed,arrowsize=0.5]
+leftleafnode_7[ label=<<table>
                     <tr>
                         <td bgcolor='darkseagreen1' port="t0">Yankee</td>
                         <td bgcolor='darkseagreen1' port="t1">Zulu</td>
@@ -130,7 +131,7 @@ rightleafnode_3[ label=<<table>
 // sibling pointer:
 // (None)
 
-// Force alignment from root to internal to leaf levels:
+//Force alignment from root to internal to leaf levels:
 edge[style=invis];
-"rootnode":s1 -> "leftleafnode_4":hk
+"rootnode":s4 -> "leftleafnode_4":hk
 }

@@ -1,0 +1,136 @@
+// Example B-Tree graph
+//
+// Breadth-first order
+//
+// Start from root, go left to right
+//
+// Workflow:
+//
+// $ dot -T svg btree.dot -o btree.svg;
+
+digraph nbtree {
+graph [fontname = "monospace"];
+node [shape = none,height=.1,fontname = "monospace",fontsize=8];
+// Level 1 (root level)
+// Downlinks + highkey:
+rootnode[ label=<<table>
+                    <tr>
+                        <td bgcolor='burlywood' port="s0">-&infin;</td>
+                        <td bgcolor='white' port="d0">&#8615;</td>
+                        <td bgcolor='burlywood' port="s1">C</td>
+                        <td bgcolor='white' port="d1">&#8615;</td>
+                        <td bgcolor='burlywood' port="s2">G</td>
+                        <td bgcolor='white' port="d2">&#8615;</td>
+                        <td bgcolor='burlywood' port="s3">M</td>
+                        <td bgcolor='white' port="d3">&#8615;</td>
+                        <td bgcolor='burlywood' port="s0">&quot;-&infin;&quot;</td>
+                        <td bgcolor='white' port="d0">&#8615;</td>
+                        <td bgcolor='burlywood' port="s1">T</td>
+                        <td bgcolor='white' port="d1">&#8615;</td>
+                        <td bgcolor='burlywood' port="s2">X</td>
+                        <td bgcolor='white' port="d2">&#8615;</td>
+                        <td bgcolor='burlywood' port="hk">+&infin;</td>
+                    </tr>
+                </table>
+               >
+        ];
+// Downlink arrows to children:
+"rootnode":d0 -> "leftleafnode_1"
+"rootnode":d1 -> "leftleafnode_2"
+"rootnode":d2 -> "leftleafnode_3"
+"rootnode":d3 -> "leftleafnode_4"
+"rootnode":d0 -> "rightleafnode_1":t0
+"rootnode":d1 -> "rightleafnode_2":t0
+"rootnode":d2 -> "rightleafnode_3":t0
+
+// sibling pointer:
+// (None)
+
+
+// Level 0 (leaf level)
+leftleafnode_1[ label=<<table>
+                    <tr>
+                        <td bgcolor='darkseagreen1' port="t0">Alfa</td>
+                        <td bgcolor='darkseagreen1' port="t1">Bravo</td>
+                        <td bgcolor='burlywood' port="hk">C</td>
+                    </tr>
+                </table>
+               >
+        ];
+// sibling pointer:
+"leftleafnode_1" -> "leftleafnode_2"[constraint=false,color=black,style=dashed,arrowsize=0.5]
+leftleafnode_2[ label=<<table>
+                    <tr>
+                        <td bgcolor='darkseagreen1' port="t0">Delta</td>
+                        <td bgcolor='darkseagreen1' port="t1">Echo</td>
+                        <td bgcolor='darkseagreen1' port="t2">Foxtrot</td>
+                        <td bgcolor='burlywood' port="hk">G</td>
+                    </tr>
+                </table>
+               >
+        ];
+// sibling pointer:
+"leftleafnode_2" -> "leftleafnode_3"[constraint=false,color=black,style=dashed,arrowsize=0.5]
+leftleafnode_3[ label=<<table>
+                    <tr>
+                        <td bgcolor='darkseagreen1' port="t0">Juliet</td>
+                        <td bgcolor='darkseagreen1' port="t1">Kilo</td>
+                        <td bgcolor='darkseagreen1' port="t2">Lima</td>
+                        <td bgcolor='burlywood' port="hk">M</td>
+                    </tr>
+                </table>
+               >
+        ];
+// sibling pointer:
+"leftleafnode_3" -> "leftleafnode_4"[constraint=false,color=black,style=dashed,arrowsize=0.5]
+leftleafnode_4[ label=<<table>
+                    <tr>
+                        <td bgcolor='darkseagreen1' port="t0">November</td>
+                        <td bgcolor='darkseagreen1' port="t1">Oscar</td>
+                        <td bgcolor='burlywood' port="hk">P</td>
+                    </tr>
+                </table>
+               >
+        ];
+// sibling pointer (not a cousin anymore):
+"leftleafnode_4" -> "rightleafnode_1"[constraint=false,color=black,style=dashed,arrowsize=0.5]
+rightleafnode_1[ label=<<table>
+                    <tr>
+                        <td bgcolor='darkseagreen1' port="t0">Quebec</td>
+                        <td bgcolor='darkseagreen1' port="t1">Romeo</td>
+                        <td bgcolor='darkseagreen1' port="t2">Sierra</td>
+                        <td bgcolor='burlywood' port="hk">T</td>
+                    </tr>
+                </table>
+               >
+        ];
+// sibling pointer:
+"rightleafnode_1" -> "rightleafnode_2"[constraint=false,color=black,style=dashed,arrowsize=0.5]
+rightleafnode_2[ label=<<table>
+                    <tr>
+                        <td bgcolor='darkseagreen1' port="t0">Uniform</td>
+                        <td bgcolor='darkseagreen1' port="t1">Victor</td>
+                        <td bgcolor='darkseagreen1' port="t2">XRay</td>
+                        <td bgcolor='burlywood' port="hk">X</td>
+                    </tr>
+                </table>
+               >
+        ];
+// sibling pointer:
+"rightleafnode_2" -> "rightleafnode_3"[constraint=false,color=black,style=dashed,arrowsize=0.5]
+rightleafnode_3[ label=<<table>
+                    <tr>
+                        <td bgcolor='darkseagreen1' port="t0">Yankee</td>
+                        <td bgcolor='darkseagreen1' port="t1">Zulu</td>
+                        <td bgcolor='burlywood' port="hk">+&infin;</td>
+                    </tr>
+                </table>
+               >
+        ];
+// sibling pointer:
+// (None)
+
+// Force alignment from root to internal to leaf levels:
+edge[style=invis];
+"rootnode":s1 -> "leftleafnode_4":hk
+}

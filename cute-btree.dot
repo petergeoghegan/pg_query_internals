@@ -15,9 +15,9 @@ node [shape = none,height=.1,fontname = "monospace",fontsize=5];
 rootnode[ label=<<table>
                     <tr>
                         <td bgcolor='burlywood' port="s0">-&infin;</td>
-                        <td bgcolor='#FFFFFF' port="d0">&#8615;</td>
+                        <td bgcolor='white' port="d0">&#8615;</td>
                         <td bgcolor='burlywood' port="s1">Papa</td>
-                        <td bgcolor='#FFFFFF' port="d1">&#8615;</td>
+                        <td bgcolor='white' port="d1">&#8615;</td>
                         <td bgcolor='burlywood' port="hk">+&infin;</td>
                     </tr>
                 </table>
@@ -35,13 +35,13 @@ rootnode[ label=<<table>
 leftinternal[ label=<<table>
                     <tr>
                         <td bgcolor='burlywood' port="s0">-&infin;</td>
-                        <td bgcolor='#FFFFFF' port="d0">&#8615;</td>
+                        <td bgcolor='white' port="d0">&#8615;</td>
                         <td bgcolor='burlywood' port="s1">Charlie</td>
-                        <td bgcolor='#FFFFFF' port="d1">&#8615;</td>
+                        <td bgcolor='white' port="d1">&#8615;</td>
                         <td bgcolor='burlywood' port="s2">Golf</td>
-                        <td bgcolor='#FFFFFF' port="d2">&#8615;</td>
+                        <td bgcolor='white' port="d2">&#8615;</td>
                         <td bgcolor='burlywood' port="s3">Mike</td>
-                        <td bgcolor='#FFFFFF' port="d3">&#8615;</td>
+                        <td bgcolor='white' port="d3">&#8615;</td>
                         <td bgcolor='burlywood' port="hk">Papa</td>
                     </tr>
                 </table>
@@ -58,11 +58,11 @@ leftinternal[ label=<<table>
 rightinternal[ label=<<table>
                     <tr>
                         <td bgcolor='burlywood' port="s0">&quot;-&infin;&quot;</td>
-                        <td bgcolor='#FFFFFF' port="d0">&#8615;</td>
+                        <td bgcolor='white' port="d0">&#8615;</td>
                         <td bgcolor='burlywood' port="s1">Tango</td>
-                        <td bgcolor='#FFFFFF' port="d1">&#8615;</td>
+                        <td bgcolor='white' port="d1">&#8615;</td>
                         <td bgcolor='burlywood' port="s2">X-Ray</td>
-                        <td bgcolor='#FFFFFF' port="d2">&#8615;</td>
+                        <td bgcolor='white' port="d2">&#8615;</td>
                         <td bgcolor='burlywood' port="hk">+&infin;</td>
                     </tr>
                 </table>

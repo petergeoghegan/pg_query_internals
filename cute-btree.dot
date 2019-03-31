@@ -53,7 +53,7 @@ leftinternal[ label=<<table>
 "leftinternal":d2 -> "leftleafnode_3"
 "leftinternal":d3 -> "leftleafnode_4"
 // sibling pointer:
-"leftinternal" -> "rightinternal"[constraint=false,color=burlywood,style=dashed,arrowsize=0.5]
+"leftinternal" -> "rightinternal"[constraint=false,color=black,style=dashed,arrowsize=0.5]
 // Downlinks + highkey:
 rightinternal[ label=<<table>
                     <tr>
@@ -87,7 +87,7 @@ leftleafnode_1[ label=<<table>
                >
         ];
 // sibling pointer:
-"leftleafnode_1" -> "leftleafnode_2"[constraint=false,color=burlywood,style=dashed,arrowsize=0.5]
+"leftleafnode_1" -> "leftleafnode_2"[constraint=false,color=black,style=dashed,arrowsize=0.5]
 leftleafnode_2[ label=<<table>
                     <tr>
                         <td bgcolor='darkseagreen1' port="t0">Delta</td>
@@ -99,7 +99,7 @@ leftleafnode_2[ label=<<table>
                >
         ];
 // sibling pointer:
-"leftleafnode_2" -> "leftleafnode_3"[constraint=false,color=burlywood,style=dashed,arrowsize=0.5]
+"leftleafnode_2" -> "leftleafnode_3"[constraint=false,color=black,style=dashed,arrowsize=0.5]
 leftleafnode_3[ label=<<table>
                     <tr>
                         <td bgcolor='darkseagreen1' port="t0">Juliet</td>
@@ -111,7 +111,7 @@ leftleafnode_3[ label=<<table>
                >
         ];
 // sibling pointer:
-"leftleafnode_3" -> "leftleafnode_4"[constraint=false,color=burlywood,style=dashed,arrowsize=0.5]
+"leftleafnode_3" -> "leftleafnode_4"[constraint=false,color=black,style=dashed,arrowsize=0.5]
 leftleafnode_4[ label=<<table>
                     <tr>
                         <td bgcolor='darkseagreen1' port="t0">November</td>
@@ -121,8 +121,8 @@ leftleafnode_4[ label=<<table>
                 </table>
                >
         ];
-// sibling pointer:
-"leftleafnode_4" -> "rightleafnode_1"[constraint=false,color=burlywood,style=dashed,arrowsize=0.5]
+// sibling/cousin pointer:
+"leftleafnode_4" -> "rightleafnode_1"[constraint=false,color=gray,style=dashed,arrowsize=0.5]
 rightleafnode_1[ label=<<table>
                     <tr>
                         <td bgcolor='darkseagreen1' port="t0">Quebec</td>
@@ -134,7 +134,7 @@ rightleafnode_1[ label=<<table>
                >
         ];
 // sibling pointer:
-"rightleafnode_1" -> "rightleafnode_2"[constraint=false,color=burlywood,style=dashed,arrowsize=0.5]
+"rightleafnode_1" -> "rightleafnode_2"[constraint=false,color=black,style=dashed,arrowsize=0.5]
 rightleafnode_2[ label=<<table>
                     <tr>
                         <td bgcolor='darkseagreen1' port="t0">Uniform</td>
@@ -146,7 +146,7 @@ rightleafnode_2[ label=<<table>
                >
         ];
 // sibling pointer:
-"rightleafnode_2" -> "rightleafnode_3"[constraint=false,color=burlywood,style=dashed,arrowsize=0.5]
+"rightleafnode_2" -> "rightleafnode_3"[constraint=false,color=black,style=dashed,arrowsize=0.5]
 rightleafnode_3[ label=<<table>
                     <tr>
                         <td bgcolor='darkseagreen1' port="t0">Yankee</td>

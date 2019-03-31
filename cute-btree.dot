@@ -24,8 +24,8 @@ rootnode[ label=<<table>
                >
         ];
 // Downlink arrows to children:
-"rootnode":d0 -> "leftinternal":s0
-"rootnode":d1 -> "rightinternal":s0
+"rootnode":d0 -> "leftinternal"
+"rootnode":d1 -> "rightinternal"
 // sibling pointer:
 // (None)
 
@@ -48,10 +48,10 @@ leftinternal[ label=<<table>
                >
         ];
 // Downlink arrows to children:
-"leftinternal":d0 -> "leafnode_1":t0
-"leftinternal":d1 -> "leafnode_2":t0
-"leftinternal":d2 -> "leafnode_3":t0
-"leftinternal":d3 -> "leafnode_4":t0
+"leftinternal":d0 -> "leafnode_1"
+"leftinternal":d1 -> "leafnode_2"
+"leftinternal":d2 -> "leafnode_3"
+"leftinternal":d3 -> "leafnode_4"
 // sibling pointer:
 "leftinternal" -> "rightinternal"[constraint=false,color=burlywood,style=dashed,arrowsize=0.5]
 // Downlinks + highkey:

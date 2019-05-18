@@ -54,8 +54,8 @@ leafnode_1[ label=<<table>
 "leafnode_1" -> "leafnode_2"[constraint=false,color=black,style=dashed,arrowsize=0.5]
 leafnode_2[ label=<<table>
                     <tr>
-                        <td bgcolor='darkseagreen1' port="t0">367,'(6,1')</td>
-                        <td bgcolor='darkseagreen1' port="t1">368,'(6,2')</td>
+                        <td bgcolor='darkseagreen1' port="t0">367,'(6,1)'</td>
+                        <td bgcolor='darkseagreen1' port="t1">368,'(6,2)'</td>
                         <td border="0" bgcolor='white' port="t2">...</td>
                         <td bgcolor='darkseagreen1' port="t3">732,'(11,61)'</td>
                         <td bgcolor='burlywood' port="hk">733,'-&infin;'</td>

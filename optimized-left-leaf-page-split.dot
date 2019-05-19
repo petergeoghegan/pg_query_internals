@@ -15,7 +15,7 @@ node [shape = none,height=.1,fontname = "monospace",fontsize=18];
 leafnode_1[ label=<<table>
                     <tr>
                         <td border="0" bgcolor='white' port="t0">...</td>
-                        <td bgcolor='darkseagreen1' port="t1"><font color="red">54</font>,15</td>
+                        <td bgcolor='darkseagreen1' port="t1"><font color="red">35</font>,15</td>
                     </tr>
                 </table>
                >

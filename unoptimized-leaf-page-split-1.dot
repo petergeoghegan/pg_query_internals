@@ -1,0 +1,48 @@
+// Example B-Tree graph
+//
+// Breadth-first order
+//
+// Start from root, go left to right
+//
+// Workflow:
+//
+// $ dot -T svg btree.dot -o btree.svg;
+
+digraph nbtree {
+graph [fontname = "monospace"];
+node [shape = none,height=.1,fontname = "monospace",fontsize=18];
+// Level 0 (leaf level)
+leafnode_2[ label=<<table>
+                    <tr>
+                        <td bgcolor='darkseagreen1' port="t2"><font color="magenta">1</font>,1</td>
+                        <td bgcolor='darkseagreen1' port="t3"><font color="magenta">1</font>,2</td>
+                        <td bgcolor='white' port="t3">   </td>
+                        <td bgcolor='white' port="t3">   </td>
+                    </tr>
+                </table>
+               >
+        ];
+leafnode_3[ label=<<table>
+                    <tr>
+                        <td bgcolor='darkseagreen1' port="t4"><font color="magenta">1</font>,3</td>
+                        <td bgcolor='darkseagreen1' port="t4"><font color="magenta">1</font>,4</td>
+                        <td bgcolor='white' port="t3">   </td>
+                        <td bgcolor='white' port="t3">   </td>
+                    </tr>
+                </table>
+               >
+        ];
+leafnode_4[ label=<<table>
+                    <tr>
+                        <td bgcolor='darkseagreen1' port="t4"><font color="magenta">1</font>,5</td>
+                        <td bgcolor='darkseagreen1' port="t4"><font color="magenta">1</font>,6</td>
+                        <td bgcolor='darkseagreen1' port="t4"><font color="blue">2</font>,1</td>
+                        <td bgcolor='white' port="t3">   </td>
+                    </tr>
+                </table>
+               >
+        ];
+//Force alignment from root to internal to leaf levels:
+//edge[style=invis];
+//"rootnode":d1 -> "leafnode_2":t2
+}

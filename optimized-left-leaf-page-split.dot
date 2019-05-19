@@ -16,6 +16,10 @@ leafnode_1[ label=<<table>
                     <tr>
                         <td border="0" bgcolor='white' port="t0">...</td>
                         <td bgcolor='darkseagreen1' port="t1"><font color="red">35</font>,15</td>
+                        <td bgcolor='darkseagreen1' port="t2"><font color="magenta">55</font>,1</td>
+                        <td bgcolor='darkseagreen1' port="t3"><font color="magenta">55</font>,2</td>
+                        <td bgcolor='darkseagreen1' port="t4"><font color="magenta">55</font>,3</td>
+                        <td bgcolor='darkseagreen1' port="t5"><font color="magenta">55</font>,4</td>
                     </tr>
                 </table>
                >

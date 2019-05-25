@@ -105,6 +105,7 @@ leftleafnode_3[ label=<<table>
                         <td bgcolor='darkseagreen1' port="t0">Juliet</td>
                         <td bgcolor='darkseagreen1' port="t1">Kilo</td>
                         <td bgcolor='darkseagreen1' port="t2">Lima</td>
+                        <td bgcolor='darkseagreen1' port="t3">Mike</td>
                         <td bgcolor='burlywood' port="hk">Mike</td>
                     </tr>
                 </table>

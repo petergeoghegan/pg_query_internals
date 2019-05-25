@@ -17,11 +17,11 @@ rootnode[ label=<<table>
                     <tr>
                         <td bgcolor='burlywood' port="s0">-&infin;</td>
                         <td bgcolor='white' port="d0">&#8615;</td>
-                        <td bgcolor='burlywood' port="s1">C</td>
+                        <td bgcolor='burlywood' port="s1">D</td>
                         <td bgcolor='white' port="d1">&#8615;</td>
                         <td bgcolor='burlywood' port="s2">G</td>
                         <td bgcolor='white' port="d2">&#8615;</td>
-                        <td bgcolor='burlywood' port="s3">M</td>
+                        <td bgcolor='burlywood' port="s3">N</td>
                         <td bgcolor='white' port="d3">&#8615;</td>
                         <td bgcolor='burlywood' port="s4">P</td>
                         <td bgcolor='white' port="d4">&#8615;</td>
@@ -53,7 +53,7 @@ leafnode_1[ label=<<table>
                     <tr>
                         <td bgcolor='darkseagreen1' port="t0">Alfa</td>
                         <td bgcolor='darkseagreen1' port="t1">Bravo</td>
-                        <td bgcolor='burlywood' port="hk">C</td>
+                        <td bgcolor='burlywood' port="hk">D</td>
                     </tr>
                 </table>
                >

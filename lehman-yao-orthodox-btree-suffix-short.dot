@@ -27,7 +27,7 @@ rootnode[ label=<<table>
                         <td bgcolor='white' port="d4">&#8615;</td>
                         <td bgcolor='burlywood' port="s5">T</td>
                         <td bgcolor='white' port="d5">&#8615;</td>
-                        <td bgcolor='burlywood' port="s6">X</td>
+                        <td bgcolor='burlywood' port="s6">Y</td>
                         <td bgcolor='white' port="d6">&#8615;</td>
                         <td bgcolor='burlywood' port="hk">+&infin;</td>
                     </tr>
@@ -78,7 +78,7 @@ leafnode_3[ label=<<table>
                         <td bgcolor='darkseagreen1' port="t1">Kilo</td>
                         <td bgcolor='darkseagreen1' port="t2">Lima</td>
                         <td bgcolor='darkseagreen1' port="t3">Mike</td>
-                        <td bgcolor='burlywood' port="hk">M</td>
+                        <td bgcolor='burlywood' port="hk">N</td>
                     </tr>
                 </table>
                >
@@ -113,7 +113,7 @@ leafnode_6[ label=<<table>
                         <td bgcolor='darkseagreen1' port="t0">Uniform</td>
                         <td bgcolor='darkseagreen1' port="t1">Victor</td>
                         <td bgcolor='darkseagreen1' port="t2">XRay</td>
-                        <td bgcolor='burlywood' port="hk">X</td>
+                        <td bgcolor='burlywood' port="hk">Y</td>
                     </tr>
                 </table>
                >

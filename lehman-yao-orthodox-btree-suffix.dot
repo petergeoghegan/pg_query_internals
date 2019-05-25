@@ -40,7 +40,7 @@ leftinternal[ label=<<table>
                         <td bgcolor='white' port="d1">&#8615;</td>
                         <td bgcolor='burlywood' port="s2">G</td>
                         <td bgcolor='white' port="d2">&#8615;</td>
-                        <td bgcolor='burlywood' port="s3">M</td>
+                        <td bgcolor='burlywood' port="s3">N</td>
                         <td bgcolor='white' port="d3">&#8615;</td>
                         <td bgcolor='burlywood' port="hk">P</td>
                     </tr>
@@ -61,7 +61,7 @@ rightinternal[ label=<<table>
                         <td bgcolor='white' port="d0">&#8615;</td>
                         <td bgcolor='burlywood' port="s1">T</td>
                         <td bgcolor='white' port="d1">&#8615;</td>
-                        <td bgcolor='burlywood' port="s2">X</td>
+                        <td bgcolor='burlywood' port="s2">Y</td>
                         <td bgcolor='white' port="d2">&#8615;</td>
                         <td bgcolor='burlywood' port="hk">+&infin;</td>
                     </tr>
@@ -106,7 +106,7 @@ leftleafnode_3[ label=<<table>
                         <td bgcolor='darkseagreen1' port="t1">Kilo</td>
                         <td bgcolor='darkseagreen1' port="t2">Lima</td>
                         <td bgcolor='darkseagreen1' port="t3">Mike</td>
-                        <td bgcolor='burlywood' port="hk">M</td>
+                        <td bgcolor='burlywood' port="hk">N</td>
                     </tr>
                 </table>
                >
@@ -141,7 +141,7 @@ rightleafnode_2[ label=<<table>
                         <td bgcolor='darkseagreen1' port="t0">Uniform</td>
                         <td bgcolor='darkseagreen1' port="t1">Victor</td>
                         <td bgcolor='darkseagreen1' port="t2">XRay</td>
-                        <td bgcolor='burlywood' port="hk">X</td>
+                        <td bgcolor='burlywood' port="hk">Y</td>
                     </tr>
                 </table>
                >

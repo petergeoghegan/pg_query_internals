@@ -12,36 +12,36 @@ digraph nbtree {
 graph [fontname = "monospace"];
 node [shape = none,height=.1,fontname = "monospace",fontsize=18];
 // Level 0 (leaf level)
-leafnode_2[ label=<<table width="180">
+leafnode_2[ label=<<table width="200">
                     <tr>
-                        <td bgcolor='darkseagreen1' port="t2" width="45"><font color="magenta">1</font>,1</td>
-                        <td bgcolor='darkseagreen1' port="t3" width="45"><font color="magenta">1</font>,2</td>
-                        <td bgcolor='white' port="t3" width="45"></td>
-                        <td bgcolor='white' port="t3" width="45"></td>
+                        <td bgcolor='darkseagreen1' port="t2" width="50"><font color="magenta">1</font>,1</td>
+                        <td bgcolor='darkseagreen1' port="t3" width="50"><font color="magenta">1</font>,2</td>
+                        <td bgcolor='white' port="t3" width="50"></td>
+                        <td bgcolor='white' port="t3" width="50"></td>
                     </tr>
                 </table>
                >
         ];
 edge[style=invis];
 "leafnode_2" -> "leafnode_3"
-leafnode_3[ label=<<table width="180">
+leafnode_3[ label=<<table width="200">
                     <tr>
-                        <td bgcolor='darkseagreen1' port="t4" width="45"><font color="magenta">1</font>,3</td>
-                        <td bgcolor='darkseagreen1' port="t4" width="45"><font color="magenta">1</font>,4</td>
-                        <td bgcolor='white' port="t3" width="45"></td>
-                        <td bgcolor='white' port="t3" width="45"></td>
+                        <td bgcolor='darkseagreen1' port="t4" width="50"><font color="magenta">1</font>,3</td>
+                        <td bgcolor='darkseagreen1' port="t4" width="50"><font color="magenta">1</font>,4</td>
+                        <td bgcolor='white' port="t3" width="50"></td>
+                        <td bgcolor='white' port="t3" width="50"></td>
                     </tr>
                 </table>
                >
         ];
 edge[style=invis];
 "leafnode_3" -> "leafnode_4"
-leafnode_4[ label=<<table width="180">
+leafnode_4[ label=<<table width="200">
                     <tr>
-                        <td bgcolor='darkseagreen1' port="t4" width="45"><font color="magenta">1</font>,5</td>
-                        <td bgcolor='darkseagreen1' port="t4" width="45"><font color="magenta">1</font>,6</td>
-                        <td bgcolor='darkseagreen1' port="t4" width="45"><font color="blue">2</font>,1</td>
-                        <td bgcolor='white' port="t3" width="45"></td>
+                        <td bgcolor='darkseagreen1' port="t4" width="50"><font color="magenta">1</font>,5</td>
+                        <td bgcolor='darkseagreen1' port="t4" width="50"><font color="magenta">1</font>,6</td>
+                        <td bgcolor='darkseagreen1' port="t4" width="50"><font color="blue">2</font>,1</td>
+                        <td bgcolor='white' port="t3" width="50"></td>
                     </tr>
                 </table>
                >
